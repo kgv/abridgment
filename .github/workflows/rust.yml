@@ -12,9 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: awalsh128/cache-apt-pkgs-action@v1
-        with:
-          packages: libgtk-3-dev librust-atk-dev
       - uses: dtolnay/rust-toolchain@nightly
       - uses: Swatinem/rust-cache@v2
       - run: cargo check
@@ -24,9 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: awalsh128/cache-apt-pkgs-action@v1
-        with:
-          packages: libgtk-3-dev librust-atk-dev
       - uses: dtolnay/rust-toolchain@nightly
       - uses: Swatinem/rust-cache@v2
       - run: cargo test --all
@@ -36,9 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: awalsh128/cache-apt-pkgs-action@v1
-        with:
-          packages: libgtk-3-dev librust-atk-dev
       - uses: dtolnay/rust-toolchain@nightly
         with:
           components: rustfmt
@@ -50,9 +41,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: awalsh128/cache-apt-pkgs-action@v1
-        with:
-          packages: libgtk-3-dev librust-atk-dev
       - uses: dtolnay/rust-toolchain@nightly
         with:
           components: clippy
